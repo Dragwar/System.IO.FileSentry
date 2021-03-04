@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>System.IO</RootNamespace>
+    <NoWarn>CA1063;IDE0041</NoWarn>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <PropertyGroup>
+    <Version>1.0.1</Version>
+    <RepositoryType>git</RepositoryType>
+    <PackageId>FileSentry</PackageId>
+    <AssemblyTitle>System.IO.FileSentry</AssemblyTitle>
+    <Description>A System.IO.FileSentry, which can be used to suppress duplicate events that fire on a single change to the file and remove event handlers during disposal.</Description>
+    <Authors>Vipul Prashar;Stef Heyenrath;Everett Grassler</Authors>
+    <PackageTags>FileSystemWatcher;System.IO.FileSentry;FileSentry;Delayed;Multiple;Events</PackageTags>
+    <PackageReleaseNotes>Fixed nuget package description</PackageReleaseNotes>
+    <PackageProjectUrl>https://github.com/Dragwar/System.IO.FileSentry</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Dragwar/System.IO.FileSentry</RepositoryUrl>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugType>full</DebugType>
+    <IncludeSource>True</IncludeSource>
+    <IncludeSymbols>True</IncludeSymbols>
+    <PathMap>$(MSBuildProjectDirectory)=/</PathMap>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+</Project>
